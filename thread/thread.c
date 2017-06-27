@@ -20,10 +20,6 @@ int stevec = 0;
 
 //int tab[][2], int nivo, int st_nivojev, llong vsota
 
-int comparator(const void *a, const void *b) {
-    return (*(int *) a - *(int *) b);
-}
-
 void rekurzija(Argumenti *arg) {
     int start_stevec = stevec;
 
