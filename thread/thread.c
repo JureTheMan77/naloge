@@ -18,19 +18,12 @@ typedef struct Argumenti {
 pthread_t tid[18];
 int stevec = 0;
 
-//int tab[][2], int nivo, int st_nivojev, llong vsota
-
 void rekurzija(Argumenti *arg) {
     int start_stevec = stevec;
 
     for (int i = arg->tab[arg->nivo][0]; i <= arg->tab[arg->nivo][1]; i++) {
         llong dodatek = (llong) pow(10, arg->st_nivojev - arg->nivo) * i;
         arg->vsota += dodatek;
-        /*for (int j = 0; j < arg->st_nivojev + 1; j++) {
-            printf("%d %d\n", arg->tab[j][0], arg->tab[j][1]);
-        }*/
-
-        //printf("%lld %d %lld\n", arg->vsota, arg->nivo, (llong) pthread_self());
 
         if (arg->st_nivojev == arg->nivo) {
             printf("%lld\n", arg->vsota);
@@ -45,9 +38,7 @@ void rekurzija(Argumenti *arg) {
             pthread_create(&(tid[stevec]), NULL, (void *(*)(void *)) &rekurzija, vstop);
         }
         arg->vsota -= dodatek;
-        //printf("%d\n", i);
     }
-    //printf("test\n");
     if (arg->id == 0) {
         return;
     }
@@ -55,12 +46,9 @@ void rekurzija(Argumenti *arg) {
         pthread_exit(0);
     } else {
         for (int i = arg->tab[arg->nivo][0]; i <= arg->tab[arg->nivo][0]; i++) {
-            printf("%lld", (long long int) tid[start_stevec + i]);
             pthread_join(tid[start_stevec + i], 0);
         }
     }
-    printf("%d\n", (int) arg->id);
-    pthread_join(arg->id, 0);
     return;
 }
 
@@ -82,7 +70,7 @@ int main() {
     vstop->id = 0;
 
     rekurzija(vstop);
-    sleep(1);
+    sleep(25);
 
     clock_t end = clock();
     double time_spent = (double) (end - begin) / CLOCKS_PER_SEC;
