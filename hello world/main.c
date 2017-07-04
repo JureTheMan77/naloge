@@ -1,6 +1,8 @@
 #include <stdio.h>
 
 int main() {
-    printf("Hello, World!\n");
+    int a = 0;
+    a = 5 * 4;
+    printf("%d", a);
     return 0;
 }
