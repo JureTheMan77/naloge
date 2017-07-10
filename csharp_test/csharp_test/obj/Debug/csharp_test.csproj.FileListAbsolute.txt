@@ -1,0 +1,6 @@
+C:\Users\Družina Vreček\Desktop\naloge\csharp_test\csharp_test\bin\Debug\csharp_test.exe.config
+C:\Users\Družina Vreček\Desktop\naloge\csharp_test\csharp_test\bin\Debug\csharp_test.exe
+C:\Users\Družina Vreček\Desktop\naloge\csharp_test\csharp_test\bin\Debug\csharp_test.pdb
+C:\Users\Družina Vreček\Desktop\naloge\csharp_test\csharp_test\obj\Debug\csharp_test.csprojResolveAssemblyReference.cache
+C:\Users\Družina Vreček\Desktop\naloge\csharp_test\csharp_test\obj\Debug\csharp_test.exe
+C:\Users\Družina Vreček\Desktop\naloge\csharp_test\csharp_test\obj\Debug\csharp_test.pdb

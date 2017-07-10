@@ -10,6 +10,9 @@ namespace csharp_test
     {
         static void Main(string[] args)
         {
+            Console.BackgroundColor = ConsoleColor.White;
+            Console.ForegroundColor = ConsoleColor.Black;
+            Console.Clear();
             Console.WriteLine("Hello World!");
             Console.ReadLine();
         }
